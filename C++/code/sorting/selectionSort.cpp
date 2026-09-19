@@ -3,8 +3,18 @@
 
 using namespace std;
 
-void bubbleSort(vector<int>& v, int size) {
-    
+void selectionSort(vector<int>& v, int size) {
+    for(int i=size-1; i>0; i--) {
+        int max = 0;
+        for(int j=0; j<=i; j++) {
+            if(v[j]>v[max]) max = j;
+        }
+        if(v[max]!=v[i]) {
+            int temp = v[max];
+            v[max] = v[i];
+            v[i] = temp;
+        }
+    }
 }
 
 int main() {
@@ -17,8 +27,8 @@ int main() {
         cin>>v[i];
     }
     cout<<"Sorted vector is -"<<endl;
-    bubbleSort(v, size);
+    selectionSort(v, size);
     for(int i=0; i<size; i++) {
-        cout<<v[i];
+        cout<<v[i]<<" ";
     }
 }

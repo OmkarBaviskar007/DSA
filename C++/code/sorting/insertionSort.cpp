@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void bubbleSort(vector<int>& v, int size) {
+void insertionSort(vector<int>& v, int size) {
     
 }
 
@@ -17,8 +17,8 @@ int main() {
         cin>>v[i];
     }
     cout<<"Sorted vector is -"<<endl;
-    bubbleSort(v, size);
+    insertionSort(v, size);
     for(int i=0; i<size; i++) {
-        cout<<v[i];
+        cout<<v[i]<<" ";
     }
 }
